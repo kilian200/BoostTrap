@@ -1,106 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     #gameDiv{
+        height: 300px;
+        width: 300px;
+        border: 1px solid black;
+        background-color: white;
+        padding: 50px;
+        text-align: center;
+     }
+     .btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 16;
+  -moz-border-radius: 16;
+  border-radius: 16px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 60px;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 3px;
+  text-decoration: none;
+}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+.btn:hover {
+  background: #f70a0a;
+  background-image: -webkit-linear-gradient(top, #f70a0a, #f0080b);
+  background-image: -moz-linear-gradient(top, #f70a0a, #f0080b);
+  background-image: -ms-linear-gradient(top, #f70a0a, #f0080b);
+  background-image: -o-linear-gradient(top, #f70a0a, #f0080b);
+  background-image: linear-gradient(to bottom, #f70a0a, #f0080b);
+  text-decoration: none;
+}
+#scoreContainer
+{
+    border: 1px black solid;
+    background-color: white;
+    height: 150px;
+    width: 200px;
+    margin:30px;
+    text-align: center;
+}
+</style>
 
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body>
 
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-          class="d-inline-block align-text-top">
-        JC Maxwell
-      </a>
+<body onload="miointervallo">
+    <div id="gameDiv">
+      <button id="fire" class="btn" onclick="prendiilcolore()">Fire</button>
+      <div id="scoreContainer">
+        <p id="tentativi"></p>
+        <p id="click">time:0.0</p>
+      </div>
     </div>
-  </nav>
-  <div class="container my-5 text-center" style="max-width: 580px;">
-  
-  <h1>Linguaggi di Programmazione</h1>
-  <p class="lead">
-    Kilian Contartese </p>
-  <button type="button" class="btn btn-primary">Usalo</button>
-  <button type="button" class="btn btn-secondary">Contattaci</button>
-  </div>
-  <div class="container">
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-      
-    </div>
-  </div>
-</div>
-    <div class="card" style="width: 18rem;">
-      <div>
-        <div class="card" style="width: 18rem;">
-      <div>
-        <div class="card" style="width: 18rem;">
-        </div>
-
-  <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">HTML</h5>
-    <p class="card-text">HTML un linguaggio per la costruzione di siti internet. È costituito da un insieme di comandi che permettono di definire la struttura e l'aspetto di un sito o di inserire oggetti (immagini, tabelle, moduli).</p>
-    <a href="https://github.com/kilian200/BoostTrap" class="btn btn-primary">Usalo</a>
-  </div>
-</div>
-
-   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">CSS</h5>
-    <p class="card-text">Il CSS è un linguaggio usato per definire la formattazione di documenti HTML, XHTML e XML, ad esempio i siti web e relative pagine web.</p>
-    <a href="https://github.com/kilian200/BoostTrap" class="btn btn-primary">Usalo</a>
-  </div>
-</div>
-
-   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">JAVASCRIPT</h5>
-    <p class="card-text">JavaScript è un linguaggio di scripting lato client utilizzato per rendere interattive le pagine web. JavaScript, insieme ad HTML e CSS, è una delle tecnologie principali della programmazione web front end.</p>
-    <a href="https://github.com/kilian200/BoostTrap" class="btn btn-primary">Usalo</a>
-  </div>
-</div>
-
-   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">C++</h5>
-    <p class="card-text">In informatica C++ è un linguaggio di programmazione general purpose sviluppato in origine da Bjarne Stroustrup nei Bell Labs nel 1983 come evoluzione del linguaggio C inserendo la programmazione orientata agli oggetti.</p>
-    <a href="https://github.com/kilian200/BoostTrap" class="btn btn-primary">Usalo</a>
-  </div>
-</div>
-
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">JAVA</h5>
-    <p class="card-text">Java è un linguaggio di programmazione e una piattaforma di elaborazione sviluppati da Sun Microsystems nel 1995. Esiste un numero notevole di applicazioni e siti Web, in aumento ogni giorno, che funzionano esclusivamente se è stato installato Java. Java è veloce, sicuro e affidabile.</p>
-    <a href="https://github.com/kilian200/BoostTrap" class="btn btn-primary">Usalo</a>
-  </div>
-</div>
-  
-  <script src="https://i.pinimg.com/originals/59/90/87/59908766cf25b4e988d5b8c69b54c10c.jpg"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-</div>
-
-
-</body>
-
+    <p id="test"></p>
+    <script>
+      let coloreArray = [];
+      coloreArray[0] = "red";
+      coloreArray[1] = "green";
+      coloreArray[2] = "blue";
+      coloreArray[3] = "grey";
+      let arrayClick = [];
+      let previousColor = 0;
+      let random;
+      let time;
+      let counterAttemp = 0;
+ 
+      const miointervallo = setInterval(colorChange, 1000);
+ 
+      function colorChange() {
+        do {
+          random = parseInt(Math.random() * 4);
+        } while (random == previousColor);
+ 
+        document.getElementById("gameDiv").style.backgroundColor =
+          coloreArray[random];
+        if (random == 1) {
+          time = Date.now();
+        }
+      }
+ 
+      function prendiilcolore() {
+        counterAttemp += 1;
+        if (counterAttemp == 10) {
+          document.write(
+            "<h1 style='color:red;text-align:center;margin-top:400px'>" +
+              "Numero massimo di tentativi raggiunto" +
+              "</h1>"
+          );
+        }
+        document.getElementById("tentativi").innerHTML =
+          counterAttemp + " " + "tentativi";
+        let diffTime;
+        differenza = Date.now() - time;
+        arrayClick.push(diffTime);
+        if (random == 1) {
+          document.getElementById("click").innerText =
+            "Hai cliccato in : " + differenza / 1000 + "s";
+        } else {
+          document.getElementById("click").innerHTML =
+            "<p style='color:red'>" +
+            "Premi solo se lo sfondo è Verde!" +
+            "</p>";
+        }
+      }
+    </script>
+  </body>
 </html>
